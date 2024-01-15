@@ -152,5 +152,4 @@ const RickAndMorty = () => {
     );
 };
 
-
 export default RickAndMorty;
