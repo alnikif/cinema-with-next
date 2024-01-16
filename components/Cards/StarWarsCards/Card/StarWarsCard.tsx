@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './StarWarsCard.module.scss';
 import { StarWarsType } from '../../../../types/starWarsTypes';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 export const StarWarsCard: React.FC<{ readonly characterData: StarWarsType }> = ({ characterData }) => {
   const { image, name, gender, species, homeworld, id } = characterData;
@@ -9,7 +9,7 @@ export const StarWarsCard: React.FC<{ readonly characterData: StarWarsType }> = 
     <div className={styles.CharacterCard}>
       <img src={image} alt={name} />
       <div>
-        <Link to={`/star-wars/${id}`} className={styles.link}>
+        <Link href={`/star-wars/${id}`} className={styles.link}>
           {name}
         </Link>
       </div>
